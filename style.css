@@ -1,0 +1,147 @@
+ * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.chat-container {
+  width: 400px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.chat-header {
+  background-color: #075e54;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.chat-box {
+  flex: 1;
+  padding: 15px;
+  background: #f0f0f0;
+  overflow-y: auto;
+}
+
+.message {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.message.you {
+  justify-content: flex-start;
+}
+
+.message.friend {
+  justify-content: flex-end;
+}
+
+.sender {
+  font-weight: bold;
+  color: #075e54;
+  margin-right: 5px;
+}
+
+.text {
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+  position: relative;
+}
+
+.text.you {
+  background: #dcf8c6;
+}
+
+.text.friend {
+  background: #e2e2e2;
+  text-align: left;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #fff;
+  border-top: 1px solid #ccc;
+  position: relative;
+}
+
+.input-container input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  outline: none;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.input-container input[type="text"]:focus {
+  border-color: #075e54;
+}
+
+.input-container button {
+  padding: 10px 20px;
+  background-color: #075e54;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.input-container button:hover {
+  background-color: #128c7e;
+}
+
+.emoji-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+  margin-right: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 
+
+
+
+
+
+
+
+
+
